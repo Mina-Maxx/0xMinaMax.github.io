@@ -3,104 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Maximous Maseha - CV</title>
+    <title>Mina Maximous Maseha - Colorful CV</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f9f9f9;
+            color: #444;
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             overflow: hidden;
         }
+
+        /* Header */
         .header {
-            background: #333;
+            background: linear-gradient(to right, #00b3e6, #0066ff);
             color: #fff;
-            padding-top: 30px;
-            padding-bottom: 30px;
             text-align: center;
-            border-bottom: 5px solid #00b3e6;
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #00e6ac;
         }
         .header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 40px;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .header p {
             font-size: 18px;
+            margin-top: 10px;
         }
-        .main-section {
+
+        /* Sections */
+        .section {
             background: #fff;
-            padding: 30px;
+            padding: 20px 30px;
             margin: 15px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 10px solid #00e6ac;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: slideIn 1s ease-out;
         }
         h2 {
             border-bottom: 2px solid #00b3e6;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            margin-top: 40px;
-            text-transform: uppercase;
-            color: #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
             font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         ul {
-            list-style-type: square;
-            margin: 0;
+            list-style-type: disc;
             padding-left: 20px;
+            margin: 0;
         }
+
+        /* Contact Info */
+        .contact-info {
+            background: #00e6ac;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills Grid */
         .skills {
             display: flex;
             flex-wrap: wrap;
         }
         .skill {
-            width: 50%;
-            padding: 5px 0;
+            width: 48%;
+            margin: 1%;
+            background: #00b3e6;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
         .footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
-            position: relative;
+            margin-top: 30px;
         }
         .footer p {
             margin: 0;
         }
-        .contact-info a {
-            color: #00b3e6;
-            text-decoration: none;
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <div class="header">
         <h1>Mina Maximous Maseha</h1>
-        <p class="contact-info">
-            Address: 9 Hassan Baghat Street, Shoubra, Cairo, Egypt<br>
-            Mobile: (+02) 01063358716 | Email: <a href="mailto:mina.max.business@gmail.com">mina.max.business@gmail.com</a><br>
-            LinkedIn: <a href="https://www.linkedin.com/in/mina-max/" target="_blank">LinkedIn Profile</a>
-        </p>
+        <p>Cybersecurity Professional | SOC Tier 1 Analyst | Incident Responder</p>
+        <p>Address: 9 Hassan Baghat Street, Shoubra, Cairo, Egypt | Mobile: (+02) 01063358716 | Email: <a href="mailto:mina.max.business@gmail.com" style="color: #fff;">mina.max.business@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mina-max/" target="_blank" style="color: #fff;">LinkedIn Profile</a></p>
     </div>
 
+    <!-- Container -->
     <div class="container">
-        <div class="main-section">
+        <!-- Objective -->
+        <div class="section">
             <h2>Objective</h2>
             <p>Passionate and detail-oriented cybersecurity professional with hands-on experience in incident response and security operations. Seeking a SOC Tier 1 Analyst position where I can leverage my technical skills in monitoring, threat analysis, and intrusion detection to safeguard organizational assets. Eager to apply my cybersecurity certifications, leadership qualities, and problem-solving abilities to contribute to a proactive and resilient security environment.</p>
         </div>
 
-        <div class="main-section">
+        <!-- Education -->
+        <div class="section">
             <h2>Education</h2>
             <p><strong>Faculty of Engineering</strong>, Petrochemicals Department, Minia University (2022 - Present)</p>
         </div>
 
-        <div class="main-section">
+        <!-- Certifications -->
+        <div class="section">
             <h2>Courses and Certifications</h2>
             <ul>
                 <li>Network+ (Self learning)</li>
@@ -119,51 +178,33 @@
             </ul>
         </div>
 
-        <div class="main-section">
+        <!-- Experience -->
+        <div class="section">
             <h2>Experiences and Achievements</h2>
             <ul>
-                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
-                <li><strong>ASORC Internship</strong> (Aug 2024): As IT Specialist.</li>
-                <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
-                <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
-                <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations, real-time threat monitoring, and incident response using SIEM and other SOC tools.</li>
+                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): Gaining hands-on experience in monitoring and responding to security incidents.</li>
+                <li><strong>ASORC Internship</strong> (Aug 2024): IT Specialist.</li>
+                <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations.</li>
+                <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally.</li>
+                <li><strong>LetsDefend</strong>: Ranked 7th in Egypt.</li>
             </ul>
         </div>
 
-        <div class="main-section">
+        <!-- Skills -->
+        <div class="section">
             <h2>Technical Skills</h2>
             <div class="skills">
                 <div class="skill">EDR</div>
                 <div class="skill">SIEM (QRadar, Splunk)</div>
                 <div class="skill">Log Management</div>
                 <div class="skill">Incident Response</div>
-                <div class="skill">MITRE ATT&CK Framework</div>
-                <div class="skill">Digital Forensics</div>
                 <div class="skill">Python and Bash Scripting</div>
                 <div class="skill">OSINT</div>
-                <div class="skill">Reporting</div>
-                <div class="skill">Operating Systems</div>
             </div>
-        </div>
-
-        <div class="main-section">
-            <h2>Soft Skills</h2>
-            <ul>
-                <li>Problem Solver</li>
-                <li>Critical Thinking</li>
-                <li>Team Collaboration</li>
-                <li>Adaptability</li>
-                <li>Leadership</li>
-                <li>Time Management</li>
-            </ul>
-        </div>
-
-        <div class="main-section">
-            <h2>Language Skills</h2>
-            <p>Arabic: Native language | English: Exceptionally fluent</p>
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <p>&copy; 2024 Mina Maximous Maseha. All Rights Reserved.</p>
     </div>
