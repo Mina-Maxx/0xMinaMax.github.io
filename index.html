@@ -6,34 +6,76 @@
     <title>Mina Maximous Maseha - CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        .header, .footer {
-            text-align: center;
-            background-color: #333;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header {
+            background: #333;
             color: #fff;
-            padding: 15px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+            border-bottom: 5px solid #00b3e6;
         }
-        .section {
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        .header p {
+            font-size: 18px;
+        }
+        .main-section {
             background: #fff;
+            padding: 30px;
             margin: 15px 0;
-            padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3, p {
-            margin: 5px 0;
+        h2 {
+            border-bottom: 2px solid #00b3e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            margin-top: 40px;
+            text-transform: uppercase;
+            color: #333;
+            font-size: 24px;
         }
         ul {
             list-style-type: square;
             margin: 0;
             padding-left: 20px;
         }
-        .contact-info {
-            margin-bottom: 15px;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill {
+            width: 50%;
+            padding: 5px 0;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .contact-info a {
+            color: #00b3e6;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -42,86 +84,88 @@
         <h1>Mina Maximous Maseha</h1>
         <p class="contact-info">
             Address: 9 Hassan Baghat Street, Shoubra, Cairo, Egypt<br>
-            Mobile: (+02) 01063358716 | Email: mina.max.business@gmail.com<br>
-            <a href="https://www.linkedin.com/in/mina-max/" style="color: #fff;">LinkedIn Profile</a>
+            Mobile: (+02) 01063358716 | Email: <a href="mailto:mina.max.business@gmail.com">mina.max.business@gmail.com</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/mina-max/" target="_blank">LinkedIn Profile</a>
         </p>
     </div>
 
-    <div class="section">
-        <h2>Objective</h2>
-        <p>Passionate and detail-oriented cybersecurity professional with hands-on experience in incident response and security operations. Seeking a SOC Tier 1 Analyst position where I can leverage my technical skills in monitoring, threat analysis, and intrusion detection to safeguard organizational assets. Eager to apply my cybersecurity certifications, leadership qualities, and problem-solving abilities to contribute to a proactive and resilient security environment.</p>
-    </div>
+    <div class="container">
+        <div class="main-section">
+            <h2>Objective</h2>
+            <p>Passionate and detail-oriented cybersecurity professional with hands-on experience in incident response and security operations. Seeking a SOC Tier 1 Analyst position where I can leverage my technical skills in monitoring, threat analysis, and intrusion detection to safeguard organizational assets. Eager to apply my cybersecurity certifications, leadership qualities, and problem-solving abilities to contribute to a proactive and resilient security environment.</p>
+        </div>
 
-    <div class="section">
-        <h2>Education</h2>
-        <p><strong>Faculty of Engineering</strong> - Petrochemicals Department, Minia University (2022 - Present)</p>
-    </div>
+        <div class="main-section">
+            <h2>Education</h2>
+            <p><strong>Faculty of Engineering</strong>, Petrochemicals Department, Minia University (2022 - Present)</p>
+        </div>
 
-    <div class="section">
-        <h2>Courses and Certifications</h2>
-        <ul>
-            <li>Network+ (Self learning)</li>
-            <li>Security+ (Netriders Academy)</li>
-            <li>MCSA (Self learning)</li>
-            <li>Red Hat Admin 1 (Maharatech)</li>
-            <li>SOC Path (LetsDefend site)</li>
-            <li>Cybersecurity for beginners (Maharatech)</li>
-            <li>eCDFP (Self learning)</li>
-            <li>eCIR (Netriders Academy)</li>
-            <li>eJPTv1 (Netriders Academy)</li>
-            <li>CTI 101 (arcX)</li>
-            <li>Cybercrime (UNODC)</li>
-            <li>Social Engineering (InfoSec4TC)</li>
-            <li>Google Cybersecurity Professional Certificate (Coursera)</li>
-        </ul>
-    </div>
+        <div class="main-section">
+            <h2>Courses and Certifications</h2>
+            <ul>
+                <li>Network+ (Self learning)</li>
+                <li>Security+ (Netriders Academy)</li>
+                <li>MCSA (Self learning)</li>
+                <li>Red Hat Admin 1 (Maharatech)</li>
+                <li>SOC Path (LetsDefend site)</li>
+                <li>Cybersecurity for beginners (Maharatech)</li>
+                <li>eCDFP (Self learning)</li>
+                <li>eCIR (Netriders Academy)</li>
+                <li>eJPTv1 (Netriders Academy)</li>
+                <li>CTI 101 (arcX)</li>
+                <li>Cybercrime (UNODC)</li>
+                <li>Social Engineering (InfoSec4TC)</li>
+                <li>Google Cybersecurity Professional Certificate (Coursera)</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>Experiences and Achievements</h2>
-        <ul>
-            <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
-            <li><strong>ASORC Internship</strong> (Aug 2024): As IT Specialist.</li>
-            <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
-            <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
-            <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations, real-time threat monitoring, and incident response using SIEM and other SOC tools.</li>
-        </ul>
-    </div>
+        <div class="main-section">
+            <h2>Experiences and Achievements</h2>
+            <ul>
+                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
+                <li><strong>ASORC Internship</strong> (Aug 2024): As IT Specialist.</li>
+                <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
+                <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
+                <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations, real-time threat monitoring, and incident response using SIEM and other SOC tools.</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>EDR</li>
-            <li>SIEM (QRadar, Splunk)</li>
-            <li>Log Management</li>
-            <li>Incident Response</li>
-            <li>MITRE ATT&CK Framework</li>
-            <li>Digital Forensics</li>
-            <li>Python and Bash Scripting</li>
-            <li>OSINT</li>
-            <li>Reporting</li>
-            <li>Operating Systems</li>
-        </ul>
-    </div>
+        <div class="main-section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill">EDR</div>
+                <div class="skill">SIEM (QRadar, Splunk)</div>
+                <div class="skill">Log Management</div>
+                <div class="skill">Incident Response</div>
+                <div class="skill">MITRE ATT&CK Framework</div>
+                <div class="skill">Digital Forensics</div>
+                <div class="skill">Python and Bash Scripting</div>
+                <div class="skill">OSINT</div>
+                <div class="skill">Reporting</div>
+                <div class="skill">Operating Systems</div>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Problem-solver</li>
-            <li>Critical Thinking</li>
-            <li>Team Collaboration</li>
-            <li>Adaptability</li>
-            <li>Leadership</li>
-            <li>Time Management</li>
-        </ul>
-    </div>
+        <div class="main-section">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Problem Solver</li>
+                <li>Critical Thinking</li>
+                <li>Team Collaboration</li>
+                <li>Adaptability</li>
+                <li>Leadership</li>
+                <li>Time Management</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>Language Skills</h2>
-        <p>Arabic: Native language | English: Exceptionally fluent</p>
+        <div class="main-section">
+            <h2>Language Skills</h2>
+            <p>Arabic: Native language | English: Exceptionally fluent</p>
+        </div>
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Mina Maximous Maseha</p>
+        <p>&copy; 2024 Mina Maximous Maseha. All Rights Reserved.</p>
     </div>
 </body>
 </html>
