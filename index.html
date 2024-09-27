@@ -94,19 +94,25 @@
             background: #2e2d3a; /* خلفية لونية جديدة */
             padding: 20px;
             border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
         }
         .soft-skill {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+            background: #1a1a1a; /* خلفية داكنة لكل مهارة */
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .soft-skill i {
             color: #00d9ff;
-            margin-right: 10px;
-            font-size: 24px; /* حجم الأيقونة */
+            margin-bottom: 10px;
+            font-size: 30px; /* حجم الأيقونة */
         }
         .skill-description {
-            flex-grow: 1;
+            margin: 0;
+            font-weight: bold;
         }
         .progress {
             background-color: #444;
@@ -153,9 +159,11 @@
             .skills, .certifications {
                 grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
             }
+            .soft-skills-section {
+                grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+            }
             .soft-skill {
-                flex-direction: column; /* ترتيب عمودي */
-                align-items: flex-start; /* محاذاة لليسار */
+                text-align: center; /* محاذاة النص في المركز */
             }
         }
     </style>
@@ -228,42 +236,42 @@
         <div class="section soft-skills-section">
             <h2><i class="fas fa-user-check"></i> Soft Skills</h2>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Problem Solver</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 90%;"></div>
                 </div>
             </div>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Critical Thinking</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 85%;"></div>
                 </div>
             </div>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Team Collaboration</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 80%;"></div>
                 </div>
             </div>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Adaptability</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 75%;"></div>
                 </div>
             </div>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Leadership</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 70%;"></div>
                 </div>
             </div>
             <div class="soft-skill">
-                <i class="fas fa-check-circle"></i>
+                <div><i class="fas fa-check-circle"></i></div>
                 <div class="skill-description">Time Management</div>
                 <div class="progress">
                     <div class="progress-bar" style="width: 95%;"></div>
