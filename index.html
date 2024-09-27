@@ -36,7 +36,8 @@
             font-weight: bold;
         }
         .container {
-            width: 80%;
+            width: 90%; /* زيادة العرض على الشاشات الصغيرة */
+            max-width: 800px; /* تحديد الحد الأقصى للعروض */
             margin: 20px auto;
         }
         .section {
@@ -65,12 +66,12 @@
         ul {
             padding-left: 20px;
         }
-        .skills {
+        .skills, .certifications {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
-        .skill-item {
+        .skill-item, .certification-item {
             background: linear-gradient(to right, #004080, #0066cc);
             color: #fff;
             padding: 15px;
@@ -82,17 +83,41 @@
             align-items: center;
             justify-content: center;
         }
-        .skill-item i {
+        .skill-item i, .certification-item i {
             margin-right: 10px; /* مسافة بين الأيقونة والنص */
         }
-        .skill-item:hover {
+        .skill-item:hover, .certification-item:hover {
             transform: translateY(-5px);
             background: linear-gradient(to right, #00d9ff, #0077b3);
         }
-        .certifications {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+        .soft-skills-section {
+            background: #2e2d3a; /* خلفية لونية جديدة */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .soft-skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .soft-skill i {
+            color: #00d9ff;
+            margin-right: 10px;
+            font-size: 24px; /* حجم الأيقونة */
+        }
+        .skill-description {
+            flex-grow: 1;
+        }
+        .progress {
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            margin-top: 5px;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #00d9ff;
         }
         .footer {
             background: #0d1b2a;
@@ -101,6 +126,7 @@
             padding: 20px;
             margin-top: 30px;
         }
+
         /* Animations */
         @keyframes fadeIn {
             0% {
@@ -110,6 +136,26 @@
             100% {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 32px; /* حجم الخط في العنوان */
+            }
+            .header p {
+                font-size: 18px; /* حجم الخط في الفقرات */
+            }
+            .section {
+                padding: 20px; /* تقليل الحشو */
+            }
+            .skills, .certifications {
+                grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+            }
+            .soft-skill {
+                flex-direction: column; /* ترتيب عمودي */
+                align-items: flex-start; /* محاذاة لليسار */
             }
         }
     </style>
@@ -136,26 +182,26 @@
         <div class="section">
             <h2><i class="fas fa-certificate"></i> Courses and Certifications</h2>
             <div class="certifications">
-                <div><i class="fas fa-award"></i> Network+ (Self learning)</div>
-                <div><i class="fas fa-award"></i> Security+ (Netriders Academy)</div>
-                <div><i class="fas fa-award"></i> MCSA (Self learning)</div>
-                <div><i class="fas fa-award"></i> Red Hat Admin 1 (Maharatech)</div>
-                <div><i class="fas fa-award"></i> SOC Path (LetsDefend site)</div>
-                <div><i class="fas fa-award"></i> Cybersecurity for beginners (Maharatech)</div>
-                <div><i class="fas fa-award"></i> eCDFP (Self learning)</div>
-                <div><i class="fas fa-award"></i> eCIR (Netriders Academy)</div>
-                <div><i class="fas fa-award"></i> eJPTv1 (Netriders Academy)</div>
-                <div><i class="fas fa-award"></i> CTI 101 (arcX)</div>
-                <div><i class="fas fa-award"></i> Cybercrime (UNODC)</div>
-                <div><i class="fas fa-award"></i> Social Engineering (InfoSec4TC)</div>
-                <div><i class="fas fa-award"></i> Google Cybersecurity Professional Certificate (Coursera)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Network+ (Self learning)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Security+ (Netriders Academy)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> MCSA (Self learning)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Red Hat Admin 1 (Maharatech)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> SOC Path (LetsDefend site)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Cybersecurity for beginners (Maharatech)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> eCDFP (Self learning)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> eCIR (Netriders Academy)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> eJPTv1 (Netriders Academy)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> CTI 101 (arcX)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Cybercrime (UNODC)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Social Engineering (InfoSec4TC)</div>
+                <div class="certification-item"><i class="fas fa-award"></i> Google Cybersecurity Professional Certificate (Coursera)</div>
             </div>
         </div>
 
         <div class="section">
             <h2><i class="fas fa-briefcase"></i> Experiences and Achievements</h2>
             <ul>
-                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
+                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation.</li>
                 <li><strong>ASORC Internship</strong> (Aug 2024): IT Specialist, responsible for maintaining IT systems and providing support to staff.</li>
                 <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
                 <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
@@ -179,16 +225,50 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section soft-skills-section">
             <h2><i class="fas fa-user-check"></i> Soft Skills</h2>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> Problem Solver</li>
-                <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
-                <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
-                <li><i class="fas fa-check-circle"></i> Adaptability</li>
-                <li><i class="fas fa-check-circle"></i> Leadership</li>
-                <li><i class="fas fa-check-circle"></i> Time Management</li>
-            </ul>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Problem Solver</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Critical Thinking</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Team Collaboration</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Adaptability</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Leadership</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Time Management</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
