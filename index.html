@@ -23,11 +23,10 @@
         }
         .header h1 {
             margin: 0;
-            font-size: 42px;
-            font-weight: bold;
+            font-size: 2.5rem; /* Responsive font size */
         }
         .header p {
-            font-size: 20px;
+            font-size: 1.2rem; /* Responsive font size */
             margin: 10px 0;
         }
         .header a {
@@ -36,8 +35,8 @@
             font-weight: bold;
         }
         .container {
-            width: 90%; /* زيادة العرض على الشاشات الصغيرة */
-            max-width: 800px; /* تحديد الحد الأقصى للعروض */
+            width: 90%; /* Increase width on smaller screens */
+            max-width: 800px; /* Maximum width for larger screens */
             margin: 20px auto;
         }
         .section {
@@ -58,10 +57,12 @@
             letter-spacing: 1.5px;
             border-bottom: 2px solid #00d9ff;
             padding-bottom: 10px;
+            font-size: 1.5rem; /* Responsive font size */
         }
         p, li {
             line-height: 1.6;
             color: #b0c4de;
+            font-size: 1rem; /* Responsive font size */
         }
         ul {
             padding-left: 20px;
@@ -84,14 +85,14 @@
             justify-content: center;
         }
         .skill-item i, .certification-item i {
-            margin-right: 10px; /* مسافة بين الأيقونة والنص */
+            margin-right: 10px; /* Space between icon and text */
         }
         .skill-item:hover, .certification-item:hover {
             transform: translateY(-5px);
             background: linear-gradient(to right, #00d9ff, #0077b3);
         }
         .soft-skills-section {
-            background: #2e2d3a; /* خلفية لونية جديدة */
+            background: #2e2d3a; /* New background color */
             padding: 20px;
             border-radius: 10px;
             display: grid;
@@ -99,7 +100,7 @@
             gap: 15px;
         }
         .soft-skill {
-            background: #1a1a1a; /* خلفية داكنة لكل مهارة */
+            background: #1a1a1a; /* Dark background for each skill */
             border-radius: 10px;
             padding: 15px;
             text-align: center;
@@ -108,7 +109,7 @@
         .soft-skill i {
             color: #00d9ff;
             margin-bottom: 10px;
-            font-size: 30px; /* حجم الأيقونة */
+            font-size: 30px; /* Icon size */
         }
         .skill-description {
             margin: 0;
@@ -148,22 +149,22 @@
         /* Responsive Styles */
         @media (max-width: 600px) {
             .header h1 {
-                font-size: 32px; /* حجم الخط في العنوان */
+                font-size: 1.8rem; /* Font size for smaller screens */
             }
             .header p {
-                font-size: 18px; /* حجم الخط في الفقرات */
+                font-size: 1rem; /* Font size for smaller screens */
             }
             .section {
-                padding: 20px; /* تقليل الحشو */
+                padding: 15px; /* Reduce padding on smaller screens */
             }
             .skills, .certifications {
-                grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+                grid-template-columns: 1fr; /* Single column on small screens */
             }
             .soft-skills-section {
-                grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+                grid-template-columns: 1fr; /* Single column on small screens */
             }
             .soft-skill {
-                text-align: center; /* محاذاة النص في المركز */
+                text-align: center; /* Center text on small screens */
             }
         }
     </style>
