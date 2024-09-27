@@ -47,6 +47,21 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease-in-out;
             animation: fadeIn 1s ease-in-out;
+            position: relative;
+        }
+        .section:hover {
+            transform: scale(1.02);
+        }
+        .section:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: -1;
         }
         h2 {
             margin-top: 0;
@@ -101,6 +116,19 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        /* Background effect */
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+            opacity: 0.1; /* تأثير خفيف */
+            border-radius: 10px;
+            z-index: -1;
         }
     </style>
 </head>
@@ -160,8 +188,12 @@
                 <div class="skill-item">SIEM (QRadar, Splunk)</div>
                 <div class="skill-item">Log Management</div>
                 <div class="skill-item">Incident Response</div>
+                <div class="skill-item">MITRE ATT&CK Framework</div>
+                <div class="skill-item">Digital Forensics</div>
                 <div class="skill-item">Python and Bash Scripting</div>
                 <div class="skill-item">OSINT</div>
+                <div class="skill-item">Reporting</div>
+                <div class="skill-item">Operating Systems</div>
             </div>
         </div>
 
