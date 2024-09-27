@@ -96,6 +96,23 @@
             padding: 20px;
             margin-top: 30px;
         }
+        /* Improved Soft Skills and Certifications Design */
+        .certifications ul, .soft-skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .certification-item, .soft-skill-item {
+            background: #004080;
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .certification-item i, .soft-skill-item i {
+            margin-right: 10px; /* Space between icon and text */
+        }
         /* Animations */
         @keyframes fadeIn {
             0% {
@@ -128,22 +145,22 @@
             <p><strong>Faculty of Engineering</strong> - Petrochemicals Department, Minia University (2022 - Present)</p>
         </div>
 
-        <div class="section">
+        <div class="section certifications">
             <h2><i class="fas fa-certificate"></i> Courses and Certifications</h2>
             <ul>
-                <li><i class="fas fa-award"></i> Network+ (Self learning)</li>
-                <li><i class="fas fa-award"></i> Security+ (Netriders Academy)</li>
-                <li><i class="fas fa-award"></i> MCSA (Self learning)</li>
-                <li><i class="fas fa-award"></i> Red Hat Admin 1 (Maharatech)</li>
-                <li><i class="fas fa-award"></i> SOC Path (LetsDefend site)</li>
-                <li><i class="fas fa-award"></i> Cybersecurity for beginners (Maharatech)</li>
-                <li><i class="fas fa-award"></i> eCDFP (Self learning)</li>
-                <li><i class="fas fa-award"></i> eCIR (Netriders Academy)</li>
-                <li><i class="fas fa-award"></i> eJPTv1 (Netriders Academy)</li>
-                <li><i class="fas fa-award"></i> CTI 101 (arcX)</li>
-                <li><i class="fas fa-award"></i> Cybercrime (UNODC)</li>
-                <li><i class="fas fa-award"></i> Social Engineering (InfoSec4TC)</li>
-                <li><i class="fas fa-award"></i> Google Cybersecurity Professional Certificate (Coursera)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Network+ (Self learning)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Security+ (Netriders Academy)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> MCSA (Self learning)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Red Hat Admin 1 (Maharatech)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> SOC Path (LetsDefend site)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Cybersecurity for beginners (Maharatech)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> eCDFP (Self learning)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> eCIR (Netriders Academy)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> eJPTv1 (Netriders Academy)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> CTI 101 (arcX)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Cybercrime (UNODC)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Social Engineering (InfoSec4TC)</li>
+                <li class="certification-item"><i class="fas fa-award"></i> Google Cybersecurity Professional Certificate (Coursera)</li>
             </ul>
         </div>
 
@@ -152,9 +169,9 @@
             <ul>
                 <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder. Gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
                 <li><strong>ASORC Internship</strong> (Aug 2024): As IT Specialist.</li>
-                <li><strong>TryHackMe</strong>: Ranked in the top 11%. Gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
-                <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
-                <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations, real-time threat monitoring, and incident response using SIEM and other SOC tools.</li>
+                <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics.</li>
+                <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics.</li>
+                <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations.</li>
             </ul>
         </div>
 
@@ -174,15 +191,15 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section soft-skills">
             <h2><i class="fas fa-user-check"></i> Soft Skills</h2>
             <ul>
-                <li><i class="fas fa-check-circle"></i> Problem Solver</li>
-                <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
-                <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
-                <li><i class="fas fa-check-circle"></i> Adaptability</li>
-                <li><i class="fas fa-check-circle"></i> Leadership</li>
-                <li><i class="fas fa-check-circle"></i> Time Management</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Problem Solver</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Critical Thinking</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Team Collaboration</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Adaptability</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Leadership</li>
+                <li class="soft-skill-item"><i class="fas fa-check-circle"></i> Time Management</li>
             </ul>
         </div>
 
@@ -197,4 +214,3 @@
     </div>
 </body>
 </html>
-<!-- Mina Max -->
