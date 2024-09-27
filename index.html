@@ -96,23 +96,6 @@
             padding: 20px;
             margin-top: 30px;
         }
-        /* Improved Soft Skills and Certifications Design */
-        .certifications ul, .soft-skills ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .certification-item, .soft-skill-item {
-            background: #004080;
-            color: #fff;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-        }
-        .certification-item i, .soft-skill-item i {
-            margin-right: 10px; /* Space between icon and text */
-        }
         /* Animations */
         @keyframes fadeIn {
             0% {
@@ -123,6 +106,48 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        /* Certifications Section Styles */
+        .certifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .certification-item {
+            background: #003366;
+            color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .certification-item i {
+            margin-right: 10px; /* Space between icon and text */
+        }
+
+        /* Soft Skills Section Styles */
+        .soft-skills {
+            background: #004080;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .soft-skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .soft-skill-item {
+            background: #0066cc;
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .soft-skill-item i {
+            margin-right: 10px; /* Space between icon and text */
         }
     </style>
 </head>
@@ -173,22 +198,6 @@
                 <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics.</li>
                 <li><strong>LetsDefend</strong>: Ranked 7th in Egypt, demonstrating strong skills in SOC operations.</li>
             </ul>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-            <div class="skills">
-                <div class="skill-item"><i class="fas fa-shield-alt"></i> EDR</div>
-                <div class="skill-item"><i class="fas fa-lock"></i> SIEM (QRadar, Splunk)</div>
-                <div class="skill-item"><i class="fas fa-file-alt"></i> Log Management</div>
-                <div class="skill-item"><i class="fas fa-bug"></i> Incident Response</div>
-                <div class="skill-item"><i class="fas fa-chart-line"></i> MITRE ATT&CK Framework</div>
-                <div class="skill-item"><i class="fas fa-user-secret"></i> Digital Forensics</div>
-                <div class="skill-item"><i class="fas fa-code"></i> Python and Bash Scripting</div>
-                <div class="skill-item"><i class="fas fa-binoculars"></i> OSINT</div>
-                <div class="skill-item"><i class="fas fa-file-invoice"></i> Reporting</div>
-                <div class="skill-item"><i class="fas fa-desktop"></i> Operating Systems</div>
-            </div>
         </div>
 
         <div class="section soft-skills">
