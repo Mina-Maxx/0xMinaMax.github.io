@@ -89,10 +89,34 @@
             transform: translateY(-5px);
             background: linear-gradient(to right, #00d9ff, #0077b3);
         }
-        .certifications {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+        .soft-skills-section {
+            background: #2e2d3a; /* خلفية لونية جديدة */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .soft-skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .soft-skill i {
+            color: #00d9ff;
+            margin-right: 10px;
+            font-size: 24px; /* حجم الأيقونة */
+        }
+        .skill-description {
+            flex-grow: 1;
+        }
+        .progress {
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            margin-top: 5px;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #00d9ff;
         }
         .footer {
             background: #0d1b2a;
@@ -155,7 +179,7 @@
         <div class="section">
             <h2><i class="fas fa-briefcase"></i> Experiences and Achievements</h2>
             <ul>
-                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation. Assisting in investigations, incident documentation, and collaborating with teams to enhance security protocols.</li>
+                <li><strong>DEPI Internship</strong> (Apr 2024 - Present): As Incident Responder, gaining hands-on experience in monitoring and responding to security incidents while learning best practices for threat detection and mitigation.</li>
                 <li><strong>ASORC Internship</strong> (Aug 2024): IT Specialist, responsible for maintaining IT systems and providing support to staff.</li>
                 <li><strong>TryHackMe</strong>: Ranked in the top 11%, gaining hands-on experience in SOC operations, incident response, and digital forensics. Skilled in real-time threat monitoring, log analysis, and malware investigations using SIEM and other SOC tools.</li>
                 <li><strong>Cyber Defenders</strong>: Ranked 43rd locally and in the top 2% globally, excelling in incident response and digital forensics. Experienced in log analysis and forensic investigations.</li>
@@ -179,16 +203,50 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section soft-skills-section">
             <h2><i class="fas fa-user-check"></i> Soft Skills</h2>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> Problem Solver</li>
-                <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
-                <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
-                <li><i class="fas fa-check-circle"></i> Adaptability</li>
-                <li><i class="fas fa-check-circle"></i> Leadership</li>
-                <li><i class="fas fa-check-circle"></i> Time Management</li>
-            </ul>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Problem Solver</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Critical Thinking</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Team Collaboration</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Adaptability</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Leadership</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <i class="fas fa-check-circle"></i>
+                <div class="skill-description">Time Management</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
