@@ -3,7 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mina Maximous Maseha — CyberAnubis</title>
+<title>Mina Maximous Maseha — CyberAnubis | Cybersecurity Engineer</title>
+<meta name="description" content="Cybersecurity Engineer specializing in SOC Operations, Digital Forensics & Incident Response. Top 1% on TryHackMe, #18 Egypt on CyberDefenders, #3 Egypt on LetsDefend.">
+<meta name="keywords" content="cybersecurity, SOC analyst, DFIR, digital forensics, incident response, threat hunting, malware analysis, penetration testing">
+<meta name="author" content="Mina Maximous Maseha">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mina Maximous Maseha — CyberAnubis">
+<meta property="og:description" content="Cybersecurity Engineer | SOC Operations · Digital Forensics · Incident Response · Threat Hunting">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mina-maxx.github.io/0xMinaMax.github.io">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mina Maximous Maseha — CyberAnubis">
+<meta name="twitter:description" content="Cybersecurity Engineer | SOC · DFIR · Threat Hunting">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9D%8C%80%3C/text%3E%3C/svg%3E">
+
+<!-- Font Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════
@@ -603,18 +626,129 @@ footer .foot-line {
 }
 
 /* ═══════════════════════════════════════
+   HAMBURGER MENU (Mobile)
+═══════════════════════════════════════ */
+.hamburger {
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none; border:none;
+  cursor:pointer; padding:6px;
+  z-index:101;
+}
+.hamburger span {
+  display:block; width:22px; height:2px;
+  background:var(--gold);
+  border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.active span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+.hamburger.active span:nth-child(2) { opacity:0; }
+.hamburger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+
+/* ═══════════════════════════════════════
+   SCROLL SPY — Active Nav Link
+═══════════════════════════════════════ */
+.nav-links a.active {
+  color:var(--gold-bright);
+}
+.nav-links a.active::after {
+  width:100%;
+}
+
+/* ═══════════════════════════════════════
+   BACK TO TOP BUTTON
+═══════════════════════════════════════ */
+.back-to-top {
+  position:fixed; bottom:32px; right:32px;
+  z-index:99;
+  width:42px; height:42px;
+  border-radius:50%;
+  background:rgba(26,22,16,0.9);
+  border:1px solid rgba(201,168,76,0.3);
+  color:var(--gold);
+  font-size:1.1rem;
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; visibility:hidden;
+  transform:translateY(12px);
+  transition:opacity .4s, visibility .4s, transform .4s, box-shadow .3s, border-color .3s;
+  backdrop-filter:blur(8px);
+}
+.back-to-top.visible {
+  opacity:1; visibility:visible;
+  transform:translateY(0);
+}
+.back-to-top:hover {
+  border-color:var(--gold);
+  box-shadow:0 0 18px var(--gold-glow);
+  transform:translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   TYPING CURSOR (enhanced)
+═══════════════════════════════════════ */
+.hero-nickname .typed-text {
+  border-right:2px solid var(--cyber);
+  padding-right:4px;
+  animation:cursorBlink 1.1s step-end infinite;
+}
+.hero-nickname .typed-text.done {
+  border-right-color:transparent;
+  animation:none;
+}
+
+/* ═══════════════════════════════════════
+   COUNT-UP ANIMATION
+═══════════════════════════════════════ */
+.ach-rank .hl {
+  display:inline-block;
+}
+
+/* ═══════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════ */
 @media(max-width:700px){
   nav { padding:14px 20px; }
-  .nav-links { gap:14px; }
-  .nav-links a { font-size:.62rem; letter-spacing:1.5px; }
+  .nav-links {
+    position:fixed; top:0; right:0;
+    width:260px; height:100vh;
+    background:rgba(10,8,4,0.97);
+    backdrop-filter:blur(16px);
+    flex-direction:column;
+    padding:80px 32px 40px;
+    gap:24px;
+    border-left:1px solid rgba(201,168,76,0.15);
+    transform:translateX(100%);
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  .nav-links.open {
+    transform:translateX(0);
+  }
+  .nav-links a { font-size:.78rem; letter-spacing:2px; }
+  .hamburger { display:flex; }
   .hiero-border { display:none; }
   .section { padding:70px 22px; }
-  .hero { padding:110px 22px 60px; }
+  .hero { padding:100px 20px 50px; }
+  .hero h1 { font-size:clamp(2rem,10vw,3.2rem); }
+  .hero-links { flex-wrap:wrap; justify-content:center; }
   .timeline { padding-left:30px; }
   .tl-dot { left:-24px; }
   .timeline::before { left:8px; }
+  .back-to-top { bottom:20px; right:20px; width:38px; height:38px; font-size:.95rem; }
+  .contact-links { flex-direction:column; align-items:center; }
+  .edu-box { flex-direction:column; text-align:center; }
+}
+
+/* Overlay when mobile menu is open */
+.nav-overlay {
+  position:fixed; inset:0; z-index:98;
+  background:rgba(0,0,0,0.5);
+  opacity:0; visibility:hidden;
+  transition:opacity .3s, visibility .3s;
+}
+.nav-overlay.open {
+  opacity:1; visibility:visible;
 }
 
 /* ═══════════════════════════════════════
@@ -631,26 +765,24 @@ footer .foot-line {
 <body>
 
 <!-- PARTICLE CANVAS -->
-<canvas id="particles-canvas"></canvas>
-
-
-
-
-
-
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
 
 <!-- HIEROGLYPH SIDE BORDERS -->
-<div class="hiero-border left">
+<div class="hiero-border left" aria-hidden="true">
   <div class="hiero-strip" id="hiero-left"></div>
 </div>
-<div class="hiero-border right">
+<div class="hiero-border right" aria-hidden="true">
   <div class="hiero-strip" id="hiero-right"></div>
 </div>
 
+<!-- NAV OVERLAY (mobile) -->
+<div class="nav-overlay" id="navOverlay"></div>
+
 <!-- NAV -->
-<nav>
+<header>
+<nav aria-label="Main navigation">
   <div class="nav-logo">CYBER — ANUB1S</div>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="#experience">Experience</a>
     <a href="#certifications">Certifications</a>
     <a href="#achievements">Achievements</a>
@@ -658,17 +790,21 @@ footer .foot-line {
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+</header>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero">
+<section class="hero" id="hero">
 
   <div class="hero-deco-line top"></div>
   <div class="hero-deco-line bottom"></div>
 
   <div class="hero-tag"><span class="live-dot"></span> Available for opportunities</div>
   <h1><span class="gold">Mina</span> Maximous<br><span class="cyber">Maseha</span></h1>
-  <p class="hero-nickname">// 0xAnub1sX <span class="cursor"></span></p>
+  <p class="hero-nickname">// <span class="typed-text" id="typedText"></span></p>
   <p class="hero-sub">Detail-oriented Cybersecurity Engineer with hands-on experience in SOC operations, Digital Forensics, and Incident Response. Passionate about securing infrastructures and improving detection strategies.</p>
   <div class="hero-badges">
     <span class="badge">◆ SOC Analyst L1</span>
@@ -679,6 +815,7 @@ footer .foot-line {
   <div class="hero-links">
     <a href="#contact" class="btn-gold">Get In Touch</a>
     <a href="https://www.linkedin.com/in/mina-max/" target="_blank" class="btn-cyber">LinkedIn</a>
+    <a href="#" class="btn-cyber" title="Download Resume">⬇ Resume</a>
   </div>
 </section>
 
@@ -864,6 +1001,10 @@ footer .foot-line {
       <a href="mailto:mina.max.business@gmail.com" class="c-link"><span class="c-icon">✉</span> mina.max.business@gmail.com</a>
       <a href="https://www.linkedin.com/in/mina-max/" target="_blank" class="c-link"><span class="c-icon">in</span> LinkedIn</a>
       <a href="tel:+201063358716" class="c-link"><span class="c-icon">☎</span> +2 01063358716</a>
+      <a href="https://github.com/Mina-Maxx" target="_blank" class="c-link"><span class="c-icon">⬡</span> GitHub</a>
+      <a href="https://tryhackme.com/" target="_blank" class="c-link"><span class="c-icon">🛡</span> TryHackMe</a>
+      <a href="https://cyberdefenders.org/" target="_blank" class="c-link"><span class="c-icon">🔍</span> CyberDefenders</a>
+      <a href="https://letsdefend.io/" target="_blank" class="c-link"><span class="c-icon">⚡</span> LetsDefend</a>
     </div>
     <p class="c-loc">◆ Cairo, Egypt ◆</p>
   </div>
@@ -871,20 +1012,24 @@ footer .foot-line {
 
 <footer>
   <div class="foot-line"></div>
-  <p>© 2025 Mina Maximous Maseha — All Rights Reserved</p>
+  <p>© 2025–2026 Mina Maximous Maseha — All Rights Reserved</p>
 </footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <!-- ═══════════════════════════════════════
      JAVASCRIPT
 ═══════════════════════════════════════ -->
 <script>
-// ─── 1. PARTICLE SYSTEM ───
+// ─── 1. PARTICLE SYSTEM (reduced on mobile) ───
 (function(){
   const canvas = document.getElementById('particles-canvas');
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
   const GOLD = {r:201,g:168,b:76};
   const CYBER = {r:0,g:229,b:255};
+  const PARTICLE_COUNT = window.innerWidth < 700 ? 35 : 90;
 
   function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
   window.addEventListener('resize',resize); resize();
@@ -912,7 +1057,7 @@ footer .foot-line {
     }
   }
 
-  for(let i=0;i<90;i++) particles.push(new Particle());
+  for(let i=0;i<PARTICLE_COUNT;i++) particles.push(new Particle());
 
   function loop(){
     ctx.clearRect(0,0,W,H);
@@ -924,25 +1069,17 @@ footer .foot-line {
 
 // ─── 2. HIEROGLYPH BORDER GLYPHS ───
 (function(){
-  // Simple abstract Egyptian-style SVG glyphs (no external assets)
   const glyphPaths = [
-    // Ankh
     `<svg viewBox="0 0 40 56"><circle cx="20" cy="10" r="7" stroke="#c9a84c" stroke-width="2" fill="none"/><line x1="20" y1="17" x2="20" y2="50" stroke="#c9a84c" stroke-width="2"/><line x1="10" y1="26" x2="30" y2="26" stroke="#c9a84c" stroke-width="2"/></svg>`,
-    // Lotus
     `<svg viewBox="0 0 40 50"><path d="M20 40 Q20 20 8 10 Q14 22 20 25 Q26 22 32 10 Q20 20 20 40Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><line x1="20" y1="40" x2="20" y2="48" stroke="#c9a84c" stroke-width="1.5"/></svg>`,
-    // Scarab (abstract)
     `<svg viewBox="0 0 44 40"><ellipse cx="22" cy="22" rx="12" ry="10" stroke="#c9a84c" stroke-width="1.5" fill="none"/><line x1="22" y1="12" x2="22" y2="6" stroke="#c9a84c" stroke-width="1.2"/><line x1="14" y1="16" x2="8" y2="10" stroke="#c9a84c" stroke-width="1"/><line x1="30" y1="16" x2="36" y2="10" stroke="#c9a84c" stroke-width="1"/><ellipse cx="22" cy="22" rx="5" ry="4" stroke="#c9a84c" stroke-width="1" fill="none"/></svg>`,
-    // Column
     `<svg viewBox="0 0 30 56"><rect x="8" y="4" width="14" height="4" rx="1" stroke="#c9a84c" stroke-width="1.2" fill="none"/><rect x="10" y="8" width="10" height="38" stroke="#c9a84c" stroke-width="1.2" fill="none"/><rect x="7" y="46" width="16" height="4" rx="1" stroke="#c9a84c" stroke-width="1.2" fill="none"/></svg>`,
-    // Eye fragment
     `<svg viewBox="0 0 44 30"><path d="M4 15 Q22 2 40 15 Q22 28 4 15Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="22" cy="15" r="5" stroke="#c9a84c" stroke-width="1.2" fill="none"/><line x1="22" y1="20" x2="18" y2="28" stroke="#c9a84c" stroke-width="1"/></svg>`,
-    // Diamond
     `<svg viewBox="0 0 36 36"><polygon points="18,2 34,18 18,34 2,18" stroke="#c9a84c" stroke-width="1.5" fill="none"/><line x1="18" y1="2" x2="18" y2="34" stroke="#c9a84c" stroke-width="0.7"/><line x1="2" y1="18" x2="34" y2="18" stroke="#c9a84c" stroke-width="0.7"/></svg>`
   ];
 
   function buildStrip(id){
     const strip = document.getElementById(id);
-    // Repeat 3x for seamless loop
     for(let repeat=0;repeat<3;repeat++){
       glyphPaths.forEach((g,i)=>{
         const div = document.createElement('div');
@@ -957,7 +1094,132 @@ footer .foot-line {
   buildStrip('hiero-right');
 })();
 
-// ─── 3. SCROLL REVEAL (IntersectionObserver) ───
+// ─── 3. HAMBURGER MENU ───
+(function(){
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+
+  function toggleMenu(){
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    overlay.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  // Close menu when a nav link is clicked
+  navLinks.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      if(navLinks.classList.contains('open')) toggleMenu();
+    });
+  });
+})();
+
+// ─── 4. SCROLL SPY (Active Nav Link) ───
+(function(){
+  const sections = document.querySelectorAll('section[id]');
+  const navLinksAll = document.querySelectorAll('.nav-links a');
+
+  function onScroll(){
+    const scrollY = window.scrollY + 120;
+    sections.forEach(sec=>{
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
+      if(scrollY >= top && scrollY < top + height){
+        navLinksAll.forEach(a=>{
+          a.classList.remove('active');
+          if(a.getAttribute('href') === '#'+id) a.classList.add('active');
+        });
+      }
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+// ─── 5. TYPING ANIMATION ───
+(function(){
+  const el = document.getElementById('typedText');
+  if(!el) return;
+  const titles = ['0xAnub1sX', 'SOC Analyst', 'DFIR Specialist', 'Threat Hunter', 'Malware Analyst'];
+  let titleIdx = 0, charIdx = 0, isDeleting = false;
+
+  function type(){
+    const current = titles[titleIdx];
+    if(!isDeleting){
+      el.textContent = current.slice(0, charIdx+1);
+      charIdx++;
+      if(charIdx === current.length){
+        isDeleting = true;
+        setTimeout(type, 2200);
+        return;
+      }
+      setTimeout(type, 85 + Math.random()*40);
+    } else {
+      el.textContent = current.slice(0, charIdx-1);
+      charIdx--;
+      if(charIdx === 0){
+        isDeleting = false;
+        titleIdx = (titleIdx+1) % titles.length;
+        setTimeout(type, 400);
+        return;
+      }
+      setTimeout(type, 40);
+    }
+  }
+  // Start after hero animation completes
+  setTimeout(type, 1200);
+})();
+
+// ─── 6. BACK TO TOP BUTTON ───
+(function(){
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 500){
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, {passive:true});
+  btn.addEventListener('click', ()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+
+// ─── 7. COUNT-UP ANIMATION for Achievements ───
+(function(){
+  const achCards = document.querySelectorAll('.ach-rank .hl');
+  const observed = new Set();
+
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && !observed.has(e.target)){
+        observed.add(e.target);
+        const target = e.target;
+        const text = target.textContent;
+        const num = parseInt(text);
+        if(isNaN(num)) return;
+        const suffix = text.replace(String(num),'');
+        let current = 0;
+        const step = Math.max(1, Math.floor(num/30));
+        const interval = setInterval(()=>{
+          current += step;
+          if(current >= num){ current = num; clearInterval(interval); }
+          target.textContent = current + suffix;
+        }, 35);
+      }
+    });
+  }, {threshold:0.5});
+
+  achCards.forEach(el=>obs.observe(el));
+})();
+
+// ─── 8. SCROLL REVEAL (Unified IntersectionObserver) ───
 (function(){
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
@@ -968,10 +1230,11 @@ footer .foot-line {
   },{ threshold:0.15 });
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
   document.querySelectorAll('.tl-item').forEach(el=>obs.observe(el));
-  // soft rows + radar staggered reveal
-  (function(){
-    const rowsEl = document.getElementById('softRows');
-    const radarEl = document.getElementById('radarWrap');
+
+  // Soft rows + radar staggered reveal
+  const rowsEl = document.getElementById('softRows');
+  const radarEl = document.getElementById('radarWrap');
+  if(rowsEl){
     const obsS = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if(e.isIntersecting){
@@ -982,29 +1245,30 @@ footer .foot-line {
         }
       });
     },{ threshold:0.2 });
-    if(rowsEl) obsS.observe(rowsEl);
-  })();
+    obsS.observe(rowsEl);
+  }
 })();
 
-// ─── 4. STAGGERED REVEAL for .tl-item ───
+// ─── 9. STAGGERED REVEAL for timeline & grids ───
 (function(){
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const items = e.target.querySelectorAll('.tl-item');
-        items.forEach((item,i)=>{
-          setTimeout(()=> item.classList.add('visible'), i*150);
-        });
-        obs.unobserve(e.target);
-      }
-    });
-  },{ threshold:0.1 });
+  // Timeline
   const timeline = document.querySelector('.timeline');
-  if(timeline) obs.observe(timeline);
-})();
+  if(timeline){
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const items = e.target.querySelectorAll('.tl-item');
+          items.forEach((item,i)=>{
+            setTimeout(()=> item.classList.add('visible'), i*150);
+          });
+          obs.unobserve(e.target);
+        }
+      });
+    },{ threshold:0.1 });
+    obs.observe(timeline);
+  }
 
-// ─── 5. STAGGER for grid children ───
-(function(){
+  // Grids
   const grids = document.querySelectorAll('.ach-grid, .proj-grid, .skills-grid, .certs-grid');
   grids.forEach(grid=>{
     const obs = new IntersectionObserver((entries)=>{
@@ -1025,3 +1289,4 @@ footer .foot-line {
 </script>
 </body>
 </html>
+
